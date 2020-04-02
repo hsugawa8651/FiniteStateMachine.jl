@@ -2,8 +2,7 @@ language: julia
 notifications:
   email: false
 julia:
-  - 0.3
-  - 0.4
+  - 1.4
   - nightly
 after_success:
   - julia -e 'cd(Pkg.dir("FiniteStateMachine")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
